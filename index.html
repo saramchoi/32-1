@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Web Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        img, video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <img id="dont" src="before.jpg" width="100%">
+    <video id="video" src="after.mp4" style="display: none;"></video>
+    <script type="text/javascript">
+        const img = document.getElementById("dont");
+        const video = document.getElementById("video");
+
+        img.onclick = function(){
+            img.style.display = "none";
+            video.style.display = "block";
+            video.play();
+        }
+    </script>
+</body>
+</html>
